@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import index
+from .views import index,PortFolioDetail
 
 urlpatterns=[
     path('', index, name='index'),
-    # path('contact/', emailView, name='contact'),
+    path('postfolio/<int:pk>/', PortFolioDetail.as_view(), name='portfolio-detail'),
+
 
 ]
